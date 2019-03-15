@@ -337,17 +337,16 @@
 
 
 
-		<div class="past about_image bgimg-2" style="height: 900px; position: relative;">
+		<div class="past about_image bgimg-2" style="background-image: url(experience3.jpg); height: 900px; position: relative;">
 			<div class="bgimg-2 ui slide  container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
 				<h1 class="page_title" style="text-align: center;">PAST</h1>
-				<form method="POST" action="https://formspree.io/YOUREMAILHERE">
-				  <input type="email" name="email" placeholder="Your email">
-				  <textarea name="message" placeholder="Test Message"></textarea>
-				  <button type="submit">Send Test</button>
-				</form>
+
+
+				
+				<img src="jenny.jpg" class="ui fade-down">
 			</div>
 		</div>
-
+		
 
 
 		<!-- <div class="bgimg-2" style="background: #fff; height: 1200px;">
@@ -371,6 +370,11 @@
 		$('.special.cards .image').dimmer({
 		  on: 'hover'
 		});
+	</script>
+	<script>
+		$('.fade-down').hover(function(){
+	        $(this).transition('slide up');
+	    }, function(){});
 	</script>
 </body>
 </html>
