@@ -6,6 +6,8 @@
 	<title>Project 101</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" />
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="custom.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
@@ -23,7 +25,10 @@
         height: 45px;
         box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 	}
-	.custom_nav:before {
+	.custom_nav.menu {
+		border-radius: 0;
+	}
+	.custom_nav .mobile:before {
 		background-image: url('logo_kc_black.png');
 		background-size: 60px 40px;
 		display: inline-block;
@@ -32,8 +37,16 @@
 		content:"";
 		float: left;
 	}
+	#navi.menu a {
+		font-family: 'Yatra One', cursive;
+	}
 	.custom_nav a {
 		color: #000 !important;
+		font-family: 'Concert One', cursive !important;
+	}
+	.custom_nav a:hover {
+		background-color: #c1c1c1 !important;
+		color: #fff !important;
 	}
 	.custom_nav .inverted.button {
 	    box-shadow: 0 0 0 2px #000 inset!important;
@@ -46,6 +59,7 @@
 
 		<!-- Navigation -->
 		<div class="ui inverted borderless menu" id="navi">
+			<a class="mobile" href="google.com" target="_blank"></a>
 			<a class="item">Home 1</a>
 			<a class="item">Home 2</a>
 			<a class="item">Home 3</a>
@@ -401,7 +415,7 @@
 		window.onscroll = function() {scrollFunction()};
 
 		function scrollFunction() {
-		  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {   
+		  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {   
 		  	document.getElementById("navi").className = "ui inverted borderless menu custom_nav"; 
 
 		  } else {
