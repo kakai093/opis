@@ -9,29 +9,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#top_navbar {
-  background-color: #333;
-  position: fixed;
-  top: -50px;
-  width: 100%;
-  display: block;
-  transition: top 0.5s;
+#navbar.test {
+  position: fixed !important;
+  background-color: blue;
 }
 
 #navbar {
   background-color: #333;
   position: absolute;
   top: 0;
-  width: 100%;
   display: block;
 }
 
 .hamb {
-  background-color: yellow;
+  background-color: #19597b !important;
 }
 
 #navbar a {
-  float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -45,22 +39,53 @@ body {
   color: black;
 }
 
-.test {
-  background-color: red !important;
-}
-.test a {
-  font-size: 10px !important;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.test:before {
-  background-image: url('logo_kc.png');
-  background-size: 60px 40px;
-  display: inline-block;
-  width: 60px; 
-  height: 40px;
-  content:"";
-  float: left;
+.sidenav a {
+  padding: 15px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  font-size: 18px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media (min-width: 768px) {
+  #navbar {
+    width: 100%;
+  }
+  .closebtn, .openbtn {
+    display: none !important;
+  }
+  #navbar a {
+    float: left;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -71,10 +96,12 @@ body {
 </div> -->
 
 <div id="navbar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
 </div>
+<span style="font-size:30px; cursor:pointer" class="openbtn" onclick="openNav()">&#9776; open</span>
 
 <div style="padding:15px 15px 2500px;font-size:30px">
   <p><br/><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
@@ -83,30 +110,31 @@ body {
   <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
-<script>
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {    
-    // document.getElementById("top_navbar").style.top = "0";
-    document.getElementById("navbar").className = "test";
-    document.getElementById("navbar").style.position = "fixed";
-    document.getElementById("navbar").style.top = "0";
 
-  } else {
-    // document.getElementById("top_navbar").style.top = "-50px";
-    document.getElementById("navbar").className = "";
-    document.getElementById("navbar").style.position = "absolute";
-  }
-}
-</script>
+
 <script>
   function tabFunction(x) {
     if (x.matches) { // If media query matches
-      document.getElementById("navbar").className = "hamb";
-    } else {
-     document.body.style.backgroundColor = "pink";
+      document.getElementById("navbar").className = "sidenav";
+    } 
+    else {
+     document.getElementById("navbar").className = "";
+
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {    
+          // document.getElementById("top_navbar").style.top = "0";
+          document.getElementById("navbar").className = "test";
+
+        } else {
+          // document.getElementById("top_navbar").style.top = "-50px";
+          document.getElementById("navbar").className = "";
+        }
+      }
+
+
     }
   }
 
@@ -114,6 +142,17 @@ function scrollFunction() {
   tabFunction(x) // Call listener function at run time
   x.addListener(tabFunction) // Attach listener function on state changes
 
+</script>
+
+
+<script>
+  function openNav() {
+    document.getElementById("navbar").style.width = "250px";
+    console.log(123);
+  }
+  function closeNav() {
+    document.getElementById("navbar").style.width = "0";
+  }
 </script>
 
 </body>
