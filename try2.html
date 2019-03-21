@@ -9,9 +9,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body.main {
+  overflow: hidden;
+}
+
 #navbar.test {
   position: fixed !important;
   background-color: blue;
+}
+
+.menu_mobile {
+  position: fixed;
+  background-color: red;
+  width: 100%;
 }
 
 #navbar {
@@ -19,10 +29,6 @@ body {
   position: absolute;
   top: 0;
   display: block;
-}
-
-.hamb {
-  background-color: #19597b !important;
 }
 
 #navbar a {
@@ -94,30 +100,35 @@ body {
   <img src="logo_kc.png" width="72">
   <div style="float: right;">123-456-489</div>
 </div> -->
+  <div id="main_body">
 
-<div id="navbar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>
-<span style="font-size:30px; cursor:pointer" class="openbtn" onclick="openNav()">&#9776; open</span>
+    <div id="navbar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span style="font-size:30px; cursor:pointer" class="openbtn menu_mobile" onclick="openNav()">&#9776; open</span>
 
-<div style="padding:15px 15px 2500px;font-size:30px">
-  <p><br/><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
-  <p>Scroll down this frame to see the effect!</p>
-  <p>Scroll to the top to hide the navbar.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+    <div style="padding:15px 15px 2500px;font-size:30px">
+      <p><br/><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
+      <p>Scroll down this frame to see the effect!</p>
+      <p>Scroll to the top to hide the navbar.</p>
+      <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+  </div>
 
 
 
 
 <script>
   function tabFunction(x) {
+
     if (x.matches) { // If media query matches
       document.getElementById("navbar").className = "sidenav";
     } 
+
     else {
      document.getElementById("navbar").className = "";
 
@@ -148,10 +159,12 @@ body {
 <script>
   function openNav() {
     document.getElementById("navbar").style.width = "250px";
-    console.log(123);
+    document.getElementById("navbar").style.position = "fixed";
+    document.body.className = "main";
   }
   function closeNav() {
     document.getElementById("navbar").style.width = "0";
+    document.body.className = "";
   }
 </script>
 
