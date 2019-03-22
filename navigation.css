@@ -2,7 +2,7 @@
 	overflow: hidden;
 }
 #navbar {
-    z-index: 10;
+    z-index: 11;
     transition: 0.3s;
 }
 .scroll_navigation {
@@ -54,11 +54,12 @@
 	position: fixed;
 	padding: 10px;
 	top: 0;
+	z-index: 10;
 }
-#page1.page1_styles {
+#home.home_styles {
 	margin-top: 60px;
 }
-.on_mobile .page1_styles {
+.on_mobile .home_styles {
 	opacity: 0.3;		
 }
 .on_mobile .side_navigation {

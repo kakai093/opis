@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="custom.css">
 	<link rel="stylesheet" type="text/css" href="navigation.css">
+	<link rel="stylesheet" type="text/css" href="fonts.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 </head>
@@ -49,8 +50,8 @@
 		<span style="font-size:20px; cursor:pointer;" class="openbtn" onclick="openNav()">&#9776; Menu</span>
 	</div>
 
-	<div id="page1">
-		<div class="ui slide center aligned middle aligned container" style="padding-top: 142.344px; max-height: calc(112vh - 172px); height: 900px; min-height: 100%;">
+	<div id="home">
+		<div class="ui slide center aligned middle aligned container title_cap">
 			<div class="typewriter bgimg-2">
 				<img src="logo_kc.png" width="280">
 				<h1>Maria Kassandra N. Cabacang</h1>
@@ -59,8 +60,8 @@
 		</div>
 	</div>
 
-	<div class="about_image bgimg-2" style="background-image: url(about_img.jpg); height: 550px; position: relative; z-index: 9;">
-		<div class="about bgimg-2 ui slide center aligned middle aligned container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
+	<div class="about_image">
+		<div class="section ui slide center aligned middle aligned container">
 			<h1 class="page_title">ABOUT ME</h1>
 			<h1>Maria Kassandra N. Cabacang</h1>
 			<h2>Cebu City | Cebu | Philippines | +63 995 155 6480 | kasscabacang@gmail.com</h2>
@@ -68,10 +69,10 @@
 		</div>
 	</div>
 
-	<div class="about_image bgimg-2" style="background-image: url(port_img.jpg); height: 1350px; position: relative; z-index: 8;">
-		<div class="about bgimg-2 ui slide center aligned middle aligned container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
+	<div class="portfolio_image">
+		<div class="section ui slide center aligned middle aligned container">
 			<h1 class="page_title">PROJECTS</h1>
-			<div class="ui four stackable centered special cards">
+			<div class="ui four doubling centered special cards">
 			  	<div class="card">
 			    	<div class="blurring dimmable image">
 			      		<div class="ui dimmer">
@@ -292,9 +293,9 @@
 		</div>
 	</div>
 	
-	<div class="past about_image bgimg-2" style="background-image: url(exp_img3.jpg); height: 900px; position: relative;">
-		<div class="about bgimg-2 ui slide  container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
-			<h1 class="page_title" style="text-align: center;">PAST</h1>
+	<div class="experience_image">
+		<div class="section ui slide container">
+			<h1 class="page_title">PAST</h1>
 			<div class="ui items">
 			  	<div class="item">
 			    	<div class="image">
@@ -356,7 +357,7 @@
 			document.body.className = "";
 			document.getElementById("navbar").className = "ui inverted borderless stackable menu";
 			document.getElementById("menu_mobile").className = "";
-			document.getElementById("page1").className = "";
+			document.getElementById("home").className = "";
 
 			window.onscroll = function() {scrollFunction()};
 			function scrollFunction() {
@@ -375,7 +376,7 @@
 
 			document.getElementById("navbar").className = "ui inverted borderless stackable menu side_navigation";
 			document.getElementById("menu_mobile").className = "menu";
-			document.getElementById("page1").className = "page1_styles";
+			document.getElementById("home").className = "home_styles";
 
 			window.onscroll = function() {scrollFunction()};
 			function scrollFunction() {
