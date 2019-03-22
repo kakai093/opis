@@ -88,9 +88,29 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.2);
 }
 
 .past * {
 	color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+	.typewriter h1 {
+	    font-size: 4vw;
+	}
+}
+@media (max-width: 768px) {
+	.typewriter h1 {
+	    font-size: 4.5vw;
+	}
+	.about p {
+	    font-size: 20px;
+	}
+	.about {
+		padding-top: 40px !important;
+	}
+	.about_image.bgimg-2 {
+		height: 780px !important;
+	}
 }
