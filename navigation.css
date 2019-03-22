@@ -56,10 +56,10 @@
 	top: 0;
 	z-index: 10;
 }
-#home.home_styles {
+#content.content_styles {
 	margin-top: 60px;
 }
-.on_mobile .home_styles {
+.on_mobile .content_styles {
 	opacity: 0.3;		
 }
 .on_mobile .side_navigation {
@@ -67,7 +67,6 @@
 	position: fixed;
 	border-radius: 0;
 }
-
 .side_navigation .mobile_logo:before {
 	background-image: url('logo_kc.png');
 	background-size: 60px 40px;
@@ -77,6 +76,15 @@
 	content:"";
 	float: left;
     margin-left: 15px;
+}
+.scroll_navigation .mobile_logo:before {
+	background-image: url('logo_kc_black.png');
+	background-size: 60px 40px;
+	display: inline-block;
+	width: 60px; 
+	height: 40px;
+	content:"";
+	float: left;
 }
 .on_mobile .closebtn {
 	color: #fff !important;

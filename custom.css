@@ -1,17 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
 	background-color: #000;
 }
 .ui.inverted.menu {
 	background: transparent;
-}
-.home {
-	background-image: url(s11.png);
-	height: 1200px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin: 0 auto;
-	background-position: center;
-	width: 100%;
 }
 .title_cap {
 	padding-top: 142.344px;
@@ -56,7 +50,3 @@ body {
 	padding-bottom: 100px;
 	position: relative;
 }
-
-
-
-
