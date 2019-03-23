@@ -362,7 +362,7 @@
 
 				window.onscroll = function() {scrollFunction_desktop()};
 				function scrollFunction_desktop() {
-					if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {    
+		  			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {    
 						document.getElementById("navbar").className = "ui inverted borderless menu scroll_navigation";
 						document.getElementById("title_page").className = "page_title top_space";
 					} 
@@ -371,8 +371,6 @@
 						document.getElementById("title_page").className = "page_title";
 					}
 				}
-
-
 			}
 			//mobile
 			else {
@@ -383,7 +381,7 @@
 
 				window.onscroll = function() {scrollFunction_mobile()};
 				function scrollFunction_mobile() {
-					if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {    
+					if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {    
 						document.getElementById("navbar").className = "ui inverted borderless stackable menu side_navigation";
 					} 
 					else {
@@ -416,29 +414,37 @@
 	</script>
 
 	<script>
+		$('.item').click(function() {
+			$('.item').attr('class', 'item');
+			$(this).attr('class', 'item active');
+		});
+	</script>active
+	
+
+<!-- 	<script>
 		(function() {
-			'use strict';
+		  'use strict';
 
-			var section = document.querySelectorAll(".sections");
-			var sections = {};
-			var i = 0;
+		  var section = document.querySelectorAll(".sections");
+		  var sections1 = {};
+		  var i = 0;
 
-			Array.prototype.forEach.call(section, function(e) {
-				sections[e.id] = e.offsetTop;
-			});
+		  Array.prototype.forEach.call(section, function(e) {
+		    sections1[e.id] = e.offsetTop;
+		  });
 
-			window.onscroll = function() {
-				var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+		  window.onscroll = function() {
+		    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-				for (i in sections) {
-					if (sections[i] <= scrollPosition) {
-						document.querySelector('.active').setAttribute('class', 'item');
-						document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item active');
-					}
-				}
-			};
+		    for (i in sections1) {
+		      if (sections1[i] <= scrollPosition) {
+		        document.querySelector('.active').setAttribute('class', 'item');
+		        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item active');
+		      }
+		    }
+		  };
 		})();
-	</script>
+	</script> -->
 
 </body>
 </html>

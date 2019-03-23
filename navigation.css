@@ -34,9 +34,13 @@
 	background-color: #c1c1c1 !important;
 	color: #fff !important;
 }
-.scroll_navigation a:active {
-    background: #c1c1c1 !important;
-    color: #fff !important;
+.ui.inverted.menu.scroll_navigation .active.item {
+    background: #000 !important;
+    color: #fff!important;
+}
+.ui.inverted.menu.side_navigation .active.item {
+    background: #fff !important;
+    color: #000!important;
 }
 .scroll_navigation .inverted.button {
     box-shadow: 0 0 0 2px #000 inset!important;
