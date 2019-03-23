@@ -348,7 +348,13 @@
 		</div>
 
 	</div>
-
+	<p><br/><br/></p>
+	<div id="test" style="color: #fff !important;">
+	  	<p><br/><br/>Click the button to get offsetTop for the test div.</p>
+	  <p><button onclick="myFunction()">Try it</button></p>
+	  <p>offsetTop is: <span id="demo"></span></p>
+	</div>
+	<div style="height: 1000px;"></div>
 	<!-- for navigation -->
 	<script>
 		function tabFunction(x) {
@@ -421,30 +427,12 @@
 	</script>active
 	
 
-<!-- 	<script>
-		(function() {
-		  'use strict';
-
-		  var section = document.querySelectorAll(".sections");
-		  var sections1 = {};
-		  var i = 0;
-
-		  Array.prototype.forEach.call(section, function(e) {
-		    sections1[e.id] = e.offsetTop;
-		  });
-
-		  window.onscroll = function() {
-		    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-		    for (i in sections1) {
-		      if (sections1[i] <= scrollPosition) {
-		        document.querySelector('.active').setAttribute('class', 'item');
-		        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item active');
-		      }
-		    }
-		  };
-		})();
-	</script> -->
+<script>
+	function myFunction() {
+	  var testDiv = document.getElementById("test");
+	  document.getElementById("demo").innerHTML = testDiv.offsetTop;
+	}
+</script>
 
 </body>
 </html>
@@ -453,3 +441,6 @@
 
 
 <!-- http://onepagelinks.divisoupdemos.com/ -->
+
+
+
