@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="fonts.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
 </head>
 
 
@@ -21,7 +22,8 @@
 
 	<div class="ui inverted borderless stackable  menu" id="navbar">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a class="mobile_logo" href="#front"></a>
+		<!-- <a class="mobile_logo" href="#front"></a> -->
+		<a href="#" class="item active">Home</a>
 		<a href="#about" class="item">content 1</a>
 		<a href="#portfolio" class="item">content 2</a>
 		<a href="#experience" class="item">content 3</a>
@@ -51,17 +53,15 @@
 	</div>
 
 	<div id="content">
-		<div id="front">
-			<div class="ui slide center aligned middle aligned container title_cap">
-				<div class="typewriter bgimg-2">
-					<img src="logo_kc.png" width="280">
-					<h1>Maria Kassandra N. Cabacang</h1>
-					<p>Web Graphics Designer</p>
-				</div>		  
-			</div>
+		<div class="ui slide center aligned middle aligned container title_cap sections">
+			<div class="typewriter bgimg-2">
+				<img src="logo_kc.png" width="280">
+				<h1>Maria Kassandra N. Cabacang</h1>
+				<p>Web Graphics Designer</p>
+			</div>		  
 		</div>
 		
-		<div id="about" class="about_image">
+		<div id="about" class="about_image sections">
 			<div class="section ui slide center aligned middle aligned container">
 				<h1 id="title_page" class="page_title">ABOUT ME</h1>
 				<h1>Maria Kassandra N. Cabacang</h1>
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 
-		<div id="portfolio" class="portfolio_image">
+		<div id="portfolio" class="portfolio_image sections">
 			<div class="section ui slide center aligned middle aligned container">
 				<h1 id="title_page" class="page_title">PROJECTS</h1>
 				<div class="ui four doubling centered special cards">
@@ -294,7 +294,7 @@
 			</div>
 		</div>
 		
-		<div id="experience" class="experience_image">
+		<div id="experience" class="experience_image sections">
 			<div class="section ui slide container">
 				<h1 id="title_page" class="page_title">PAST</h1>
 				<div class="ui items">
@@ -413,6 +413,31 @@
 		$('.special.cards .image').dimmer({
 		  on: 'hover'
 		});
+	</script>
+
+	<script>
+		(function() {
+			'use strict';
+
+			var section = document.querySelectorAll(".sections");
+			var sections = {};
+			var i = 0;
+
+			Array.prototype.forEach.call(section, function(e) {
+				sections[e.id] = e.offsetTop;
+			});
+
+			window.onscroll = function() {
+				var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+				for (i in sections) {
+					if (sections[i] <= scrollPosition) {
+						document.querySelector('.active').setAttribute('class', 'item');
+						document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item active');
+					}
+				}
+			};
+		})();
 	</script>
 
 </body>

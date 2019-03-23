@@ -34,6 +34,10 @@
 	background-color: #c1c1c1 !important;
 	color: #fff !important;
 }
+.scroll_navigation a:active {
+    background: #c1c1c1 !important;
+    color: #fff !important;
+}
 .scroll_navigation .inverted.button {
     box-shadow: 0 0 0 2px #000 inset!important;
 }
@@ -67,7 +71,7 @@
 	position: fixed;
 	border-radius: 0;
 }
-.side_navigation .mobile_logo:before {
+/*.side_navigation .mobile_logo:before {
 	background-image: url('logo_kc.png');
 	background-size: 60px 40px;
 	display: inline-block;
@@ -85,7 +89,7 @@
 	height: 40px;
 	content:"";
 	float: left;
-}
+}*/
 .on_mobile .closebtn {
 	color: #fff !important;
     text-align: right;
@@ -107,4 +111,8 @@
 	#navbar a {
 		float: left;
 	}
+}
+
+.top_space {
+    margin-top: 45px !important;
 }
