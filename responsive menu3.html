@@ -13,7 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="fonts.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
 </head>
 
 
@@ -53,7 +52,7 @@
 	</div>
 
 	<div id="content">
-		<div class="ui slide center aligned middle aligned container title_cap sections">
+		<div id="home_page" class="ui slide center aligned middle aligned container title_cap sections">
 			<div class="typewriter bgimg-2">
 				<img src="logo_kc.png" width="280">
 				<h1>Maria Kassandra N. Cabacang</h1>
@@ -346,15 +345,13 @@
 				</div>
 			</div>
 		</div>
+		
+		<div style="height: 500px;">
+			
+		</div>
+	</div>
 
-	</div>
-	<p><br/><br/></p>
-	<div id="test" style="color: #fff !important;">
-	  	<p><br/><br/>Click the button to get offsetTop for the test div.</p>
-	  <p><button onclick="myFunction()">Try it</button></p>
-	  <p>offsetTop is: <span id="demo"></span></p>
-	</div>
-	<div style="height: 1000px;"></div>
+
 	<!-- for navigation -->
 	<script>
 		function tabFunction(x) {
@@ -380,7 +377,6 @@
 			}
 			//mobile
 			else {
-
 				document.getElementById("navbar").className = "ui inverted borderless stackable menu side_navigation";
 				document.getElementById("menu_mobile").className = "menu";
 				document.getElementById("content").className = "content_styles";
@@ -419,20 +415,59 @@
 		});
 	</script>
 
+	<!-- active nav effect -->
 	<script>
 		$('.item').click(function() {
 			$('.item').attr('class', 'item');
 			$(this).attr('class', 'item active');
 		});
-	</script>active
-	
+	</script>
 
-<script>
-	function myFunction() {
-	  var testDiv = document.getElementById("test");
-	  document.getElementById("demo").innerHTML = testDiv.offsetTop;
-	}
-</script>
+	<!-- active link on scroll -->
+	<script>
+		$(window).scroll(function() {
+
+			var scrollDistance = $(window).scrollTop();
+			var homeHeight = ($("#home_page").height()/2) + $("#navbar").height();
+			var aboutHeight = (homeHeight) + $("#about").height();
+			var portHeight = (aboutHeight) + $("#portfolio").height();
+			var expHeight = (portHeight) + $("#experience").height();
+
+			if (scrollDistance <= homeHeight) {
+				$(".item:nth-child(2)").addClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				console.log("home");
+			}
+			else if ( (scrollDistance >= homeHeight) && (scrollDistance <= aboutHeight) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").addClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				console.log("about");
+			}
+			else if ( (scrollDistance >= aboutHeight) && (scrollDistance <= portHeight) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").addClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				console.log("portfolio");
+			}
+			else if ( (scrollDistance >= portHeight) && (scrollDistance <= expHeight) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").addClass("active");
+				console.log("experience");
+			}
+			else {
+				console.log("not home");
+			}
+
+
+		}).scroll();
+	</script>
 
 </body>
 </html>
