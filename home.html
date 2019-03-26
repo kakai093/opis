@@ -6,78 +6,89 @@
 	<title>Project 101</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" />
-	<link rel="stylesheet" type="text/css" href="custom.css">
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/navigation.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 </head>
 
 
+
 <body>
-	<div class="ui branding">
 
-		<div class="ui inverted borderless menu">
-			<a class="item">Home 1</a>
-			<a class="item">Home 2</a>
-			<a class="item">Home 3</a>
-			<a class="item">Home 4</a>
-			<a class="item">Home 5</a>
-
-			<div class="right menu">
-				<div class="header-widget widget text-2 widget_text item">
-					<div class="textwidget">
-						<a href="#" target="_blank" class="ui inverted circular icon button">
-							<i aria-hidden="true" class="facebook icon"></i>
-						</a>
-						<a href="#" target="_blank" class="ui inverted circular icon button">
-							<i aria-hidden="true" class="twitter icon"></i>
-						</a>
-						<a href="#" target="_blank" class="ui inverted circular icon button">
-							<i aria-hidden="true" class="instagram icon"></i>
-						</a>
-						<a href="#" target="_blank" class="ui inverted circular icon button">
-							<i aria-hidden="true" class="youtube icon"></i>
-						</a>
-					</div>
-				</div>		
-			</div>
+	<div class="ui inverted borderless stackable  menu" id="navbar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<!-- <a class="mobile_logo" href="#front"></a> -->
+		<a href="#" class="item active">Home</a>
+		<a href="#about" class="item">About</a>
+		<a href="#portfolio" class="item">Portfolio</a>
+		<a href="#experience" class="item">Experience</a>
+		<a href="#skills" class="item">Skills</a>
+		<a href="#contact" class="item">Contact</a>
+		<div class="right menu">
+			<div class="header-widget widget text-2 widget_text">
+				<div class="textwidget">
+					<a href="#" target="_blank" class="ui inverted circular icon button">
+						<i aria-hidden="true" class="facebook icon"></i>
+					</a>
+					<a href="#" target="_blank" class="ui inverted circular icon button">
+						<i aria-hidden="true" class="twitter icon"></i>
+					</a>
+					<a href="#" target="_blank" class="ui inverted circular icon button">
+						<i aria-hidden="true" class="instagram icon"></i>
+					</a>
+					<a href="#" target="_blank" class="ui inverted circular icon button">
+						<i aria-hidden="true" class="youtube icon"></i>
+					</a>
+				</div>
+			</div>		
 		</div>
+	</div>
+	<div id="menu_mobile">
+		<span style="font-size:20px; cursor:pointer;" class="openbtn" onclick="openNav()">&#9776; Menu</span>
+	</div>
 
-		<div class="ui slide center aligned middle aligned container" style="padding-top: 142.344px; max-height: calc(112vh - 172px); height: 900px; min-height: 100%;">
+	<div id="whole_page">
+		<div id="home_page" class="ui slide center aligned middle aligned container title_cap sections">
 			<div class="typewriter bgimg-2">
-				<img src="logo_kc.png" width="280">
+				<img src="assets/images/logo_kc.png" width="280">
 				<h1>Maria Kassandra N. Cabacang</h1>
 				<p>Web Graphics Designer</p>
 			</div>		  
 		</div>
-
-		<div class="about_image bgimg-2" style="background-image: url(about.jpg); height: 550px; position: relative;">
-			<div class="about bgimg-2 ui slide center aligned middle aligned container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
-				<h1 class="page_title">ABOUT ME</h1>
+		
+		<div id="about" class="about_image sections bg">
+			<div class="section_container ui slide center aligned middle aligned container">
+				<div class="animated"><h1 id="title_page" class="page_title">ABOUT ME</h1></div>
 				<h1>Maria Kassandra N. Cabacang</h1>
 				<h2>Cebu City | Cebu | Philippines | +63 995 155 6480 | kasscabacang@gmail.com</h2>
 				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
 			</div>
 		</div>
 
-		<div class="about_image bgimg-2" style="background-image: url(experience7.jpg); height: 1350px; position: relative;">
-			<div class="about bgimg-2 ui slide center aligned middle aligned container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
-				<h1 class="page_title">PROJECTS</h1>
-				<div class="ui four stackable centered special cards">
+		<div id="portfolio" class="portfolio_image sections bg">
+			<div class="section_container ui slide center aligned middle aligned container">
+				<h1 id="title_page" class="page_title">PROJECTS</h1>
+				<div class="ui four doubling centered special cards">
 				  	<div class="card">
 				    	<div class="blurring dimmable image">
 				      		<div class="ui dimmer">
 						        <div class="content">
 						          <div class="center">
-						            <div class="ui inverted button">View Website</div>
+						            <div class="ui inverted button"><a href="https://www.allcoastdental.net/" target="_blank">View Website</a></div>
 						          </div>
 						        </div>
 				      		</div>
-				      		<img src="jenny.jpg">
+				      		<img src="assets/images/web1.jpg">
 				    	</div>
 				    	<div class="content">
-				      		<a class="header">Team Fu</a>
+				      		<a class="header">All Coast Dental</a>
 					    	<div class="meta">
-					        	<span class="date">Created in Sep 2014</span>
+					        	<span class="date">Baystone Media</span>
 					      	</div>
 				    	</div>
 				  	</div>
@@ -86,16 +97,16 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="https://www.angellfamilydentistry.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web2.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">Angell Family Dentistry</a>
 					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
+					        	<span class="date">Baystone Media</span>
 					      	</div>
 					    </div>
 				  	</div>
@@ -104,16 +115,16 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="http://www.cjchiropractic.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web3.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">CJ Chiropractic</a>
 					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
+					        	<span class="date">IMatrix</span>
 					      	</div>
 					    </div>
 				  	</div>
@@ -122,16 +133,16 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="http://www.athenachiropractic.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web4.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">Athena Chiropractic</a>
 					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
+					        	<span class="date">IMatrix</span>
 					      	</div>
 					    </div>
 				  	</div>
@@ -140,16 +151,16 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="http://westbocavet.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web5.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">West Boca Veterinary Center</a>
 					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
+					        	<span class="date">IMatrix</span>
 					      	</div>
 					    </div>
 				  	</div>
@@ -158,16 +169,16 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="https://www.holyfamilyvet.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web6.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">Holy Family Veterinary Hospital</a>
 					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
+					        	<span class="date">IMatrix</span>
 					      	</div>
 					    </div>
 				  	</div>
@@ -176,16 +187,16 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="http://www.specs2020vision.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web7.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">Specs 20/20</a>
 					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
+					        	<span class="date">IMatrix</span>
 					      	</div>
 					    </div>
 				  	</div>
@@ -194,188 +205,296 @@
 					      	<div class="ui inverted dimmer">
 					        	<div class="content">
 					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
+					            		<div class="ui inverted button"><a href="https://tlceyewear.com/" target="_blank">View Website</a></div>
 					          		</div>
 					        	</div>
 					      	</div>
-					      	<img src="jenny.jpg">
+					      	<img src="assets/images/web8.jpg">
 					    </div>
 					    <div class="content">
-					    	<a class="header">Team Hess</a>
-					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
-					      	</div>
-					    </div>
-				  	</div>
-				  	<div class="card">
-					    <div class="blurring dimmable image">
-					      	<div class="ui inverted dimmer">
-					        	<div class="content">
-					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
-					          		</div>
-					        	</div>
-					      	</div>
-					      	<img src="jenny.jpg">
-					    </div>
-					    <div class="content">
-					    	<a class="header">Team Hess</a>
-					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
-					      	</div>
-					    </div>
-				  	</div>
-				  	<div class="card">
-					    <div class="blurring dimmable image">
-					      	<div class="ui inverted dimmer">
-					        	<div class="content">
-					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
-					          		</div>
-					        	</div>
-					      	</div>
-					      	<img src="jenny.jpg">
-					    </div>
-					    <div class="content">
-					    	<a class="header">Team Hess</a>
-					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
-					      	</div>
-					    </div>
-				  	</div>
-				  	<div class="card">
-					    <div class="blurring dimmable image">
-					      	<div class="ui inverted dimmer">
-					        	<div class="content">
-					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
-					          		</div>
-					        	</div>
-					      	</div>
-					      	<img src="jenny.jpg">
-					    </div>
-					    <div class="content">
-					    	<a class="header">Team Hess</a>
-					      	<div class="meta">
-					        	<span class="date">Created in Aug 2014</span>
-					      	</div>
-					    </div>
-				  	</div>
-				  	<div class="card">
-					    <div class="blurring dimmable image">
-					      	<div class="ui inverted dimmer">
-					        	<div class="content">
-					          		<div class="center">
-					            		<div class="ui primary button">View Website</div>
-					          		</div>
-					        	</div>
-					      	</div>
-					      	<img src="jenny.jpg">
-					    </div>
-					    <div class="content">
-					    	<a class="header">Team Hess</a>
+					    	<a class="header">TLC Eyewear</a>
 					      	<div class="meta">
 					        	<span class="date">Created in Aug 2014</span>
 					      	</div>
 					    </div>
 				  	</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="past about_image bgimg-2" style="background-image: url(experience5.jpg); height: 900px; position: relative;">
-			<div class="about bgimg-2 ui slide  container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
-				<h1 class="page_title" style="text-align: center;">PAST</h1>
-				<div class="ui items">
-				  	<div class="item">
-				    	<div class="image">
-				     		<img src="jenny.jpg">
-				    	</div>
-				    	<div class="content">
-				      		<a class="header">Header</a>
-				      		<div class="meta">
-				        		<span><strong>Work</strong></span>
-				      		</div>
-					      	<div class="description">
-					        	<p>Curabitur ullamcorper non purus non pulvinar. Nulla fermentum mi vel vulputate aliquet. Ut placerat vel arcu non ullamcorper. Nam porttitor dictum sagittis. Duis pellentesque quam nec nulla pharetra, vel tincidunt nisi finibus. Mauris varius a nisl vitae tincidunt. Morbi mollis erat sapien, a vulputate massa condimentum ac. Aenean tristique turpis quis neque blandit, ut eleifend nisl aliquam. Nam vel tincidunt elit. Sed et orci quis velit pretium venenatis. Pellentesque sed mi cursus, malesuada nisi id, varius leo.</p>
-					      	</div>
-					   		<div class="extra">Additional Details</div>
-				    	</div>
-				  	</div>
-					<div class="item">
-				    	<div class="image">
-				     		<img src="jenny.jpg">
-				    	</div>
-				    	<div class="content">
-				      		<a class="header">Header</a>
-				      		<div class="meta">
-				        		<span><strong>Work</strong></span>
-				      		</div>
-					      	<div class="description">
-					        	<p>Curabitur ullamcorper non purus non pulvinar. Nulla fermentum mi vel vulputate aliquet. Ut placerat vel arcu non ullamcorper. Nam porttitor dictum sagittis. Duis pellentesque quam nec nulla pharetra, vel tincidunt nisi finibus. Mauris varius a nisl vitae tincidunt. Morbi mollis erat sapien, a vulputate massa condimentum ac. Aenean tristique turpis quis neque blandit, ut eleifend nisl aliquam. Nam vel tincidunt elit. Sed et orci quis velit pretium venenatis. Pellentesque sed mi cursus, malesuada nisi id, varius leo.</p>
-					      	</div>
-					   		<div class="extra">Additional Details</div>
-				    	</div>
-				  	</div>
-					<div class="item">
-				    	<div class="image">
-				     		<img src="jenny.jpg">
-				    	</div>
-				    	<div class="content">
-				      		<a class="header">Header</a>
-				      		<div class="meta">
-				        		<span><strong>Work</strong></span>
-				      		</div>
-					      	<div class="description">
-					        	<p>Curabitur ullamcorper non purus non pulvinar. Nulla fermentum mi vel vulputate aliquet. Ut placerat vel arcu non ullamcorper. Nam porttitor dictum sagittis. Duis pellentesque quam nec nulla pharetra, vel tincidunt nisi finibus. Mauris varius a nisl vitae tincidunt. Morbi mollis erat sapien, a vulputate massa condimentum ac. Aenean tristique turpis quis neque blandit, ut eleifend nisl aliquam. Nam vel tincidunt elit. Sed et orci quis velit pretium venenatis. Pellentesque sed mi cursus, malesuada nisi id, varius leo.</p>
-					      	</div>
-					   		<div class="extra">Additional Details</div>
-				    	</div>
-				  	</div>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div class="past about_image bgimg-2" style="background-image: url(experience3.jpg); height: 900px; position: relative;">
-			<div class="bgimg-2 ui slide  container" style="padding-top: 100px; max-height: calc(100vh - 172px); position: relative;">
-				<h1 class="page_title" style="text-align: center;">PAST</h1>
-
-
-				
-				<img src="jenny.jpg" class="ui fade-down">
 			</div>
 		</div>
 		
-
-
-		<!-- <div class="bgimg-2" style="background: #fff; height: 1200px;">
-			<div class="ui slide center aligned middle aligned container" style="padding-top: 400px; max-height: calc(100vh - 172px);">
-				<h1 style="color: #fff; font-size:60px;">ABOUT ME</h1>
-				<h1 style="color: #fff;">Kassandra Cabacang</h1>
-				<h2 style="color: #fff;">Cebu City | Cebu | Philippines | +63 995 155 6480 | kasscabacang@gmail.com</h2>
-				<p style="color: #fff;">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+		<div id="experience" class="experience_image sections bg">
+			<div class="section_container ui slide container">
+				<h1 id="title_page" class="page_title">PAST</h1>
+				<div class="ui items">
+				  	<div class="item">
+				    	<div class="image">
+				     		<img src="assets/images/jenny.jpg">
+				    	</div>
+				    	<div class="content">
+				      		<a class="header">Header</a>
+				      		<div class="meta">
+				        		<span><strong>Work</strong></span>
+				      		</div>
+					      	<div class="description">
+					        	<p>Curabitur ullamcorper non purus non pulvinar. Nulla fermentum mi vel vulputate aliquet. Ut placerat vel arcu non ullamcorper. Nam porttitor dictum sagittis. Duis pellentesque quam nec nulla pharetra, vel tincidunt nisi finibus. Mauris varius a nisl vitae tincidunt. Morbi mollis erat sapien, a vulputate massa condimentum ac. Aenean tristique turpis quis neque blandit, ut eleifend nisl aliquam. Nam vel tincidunt elit. Sed et orci quis velit pretium venenatis. Pellentesque sed mi cursus, malesuada nisi id, varius leo.</p>
+					      	</div>
+					   		<div class="extra">Additional Details</div>
+				    	</div>
+				  	</div>
+					<div class="item">
+				    	<div class="image">
+				     		<img src="assets/images/jenny.jpg">
+				    	</div>
+				    	<div class="content">
+				      		<a class="header">Header</a>
+				      		<div class="meta">
+				        		<span><strong>Work</strong></span>
+				      		</div>
+					      	<div class="description">
+					        	<p>Curabitur ullamcorper non purus non pulvinar. Nulla fermentum mi vel vulputate aliquet. Ut placerat vel arcu non ullamcorper. Nam porttitor dictum sagittis. Duis pellentesque quam nec nulla pharetra, vel tincidunt nisi finibus. Mauris varius a nisl vitae tincidunt. Morbi mollis erat sapien, a vulputate massa condimentum ac. Aenean tristique turpis quis neque blandit, ut eleifend nisl aliquam. Nam vel tincidunt elit. Sed et orci quis velit pretium venenatis. Pellentesque sed mi cursus, malesuada nisi id, varius leo.</p>
+					      	</div>
+					   		<div class="extra">Additional Details</div>
+				    	</div>
+				  	</div>
+					<div class="item">
+				    	<div class="image">
+				     		<img src="assets/images/jenny.jpg">
+				    	</div>
+				    	<div class="content">
+				      		<a class="header">Header</a>
+				      		<div class="meta">
+				        		<span><strong>Work</strong></span>
+				      		</div>
+					      	<div class="description">
+					        	<p>Curabitur ullamcorper non purus non pulvinar. Nulla fermentum mi vel vulputate aliquet. Ut placerat vel arcu non ullamcorper. Nam porttitor dictum sagittis. Duis pellentesque quam nec nulla pharetra, vel tincidunt nisi finibus. Mauris varius a nisl vitae tincidunt. Morbi mollis erat sapien, a vulputate massa condimentum ac. Aenean tristique turpis quis neque blandit, ut eleifend nisl aliquam. Nam vel tincidunt elit. Sed et orci quis velit pretium venenatis. Pellentesque sed mi cursus, malesuada nisi id, varius leo.</p>
+					      	</div>
+					   		<div class="extra">Additional Details</div>
+				    	</div>
+				  	</div>
+				</div>
 			</div>
-		</div> -->
-
-		<div>
 		</div>
 
+		<div id="skills" class="skills_image sections bg">
+			<div class="section_container ui slide center aligned middle aligned container">
+				<h1 id="title_page" class="page_title">SKILLS</h1>
+				<div class="ui small images">
+					<img src="assets/images/jenny.jpg">
+					<img src="assets/images/jenny.jpg">
+					<img src="assets/images/jenny.jpg">
+					<img src="assets/images/jenny.jpg">
+				</div>
+				<div class="ui small images">
+					<img src="assets/images/jenny.jpg">
+					<img src="assets/images/jenny.jpg">
+					<img src="assets/images/jenny.jpg">
+					<img src="assets/images/jenny.jpg">
+				</div>
+			</div>
+		</div>
 
+		<div id="contact" class="contact_image sections bg">
+			<div class="section_container ui slide center aligned middle aligned container">
+				<h1 id="title_page" class="page_title">CONTACT</h1>
+				<div class="ui success message">Message Succesfully Sent!!</div>
+				<div class="ui inverted segment">
+					<form id="contactForm">
+				  		<div id="contactForm" class="ui inverted form">
+				    		<div class="two fields">
+					    		<div class="field">
+						      		<div class="field">
+						        		<label>Name</label>
+						        		<input placeholder="Name" type="text" id="name" required>
+						      		</div>
+								  	<div class="field">
+								    	<label>E-mail</label>
+								    	<input type="text" placeholder="joe@schmoe.com" id="email" required>
+								  	</div>
+						      		<div class="field">
+						        		<label>Phone Number</label>
+						        		<input type="text" placeholder="(xxx)xxx-xxxx" id="phone" required>
+						      		</div>
+						    	</div>
+						      	<div class="field">
+								    <label>Message</label>
+								    <textarea id="message" required></textarea>
+								</div>		      		
+				    		</div>	
+				    		<button class="ui button submit" type="submit">Submit</button>
+				  		</div> 
+				  </form>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer" class="footer_image">
+			<p style="text-align: center;">All Rights Reserved @2019</p>
+		</div>
+		
 	</div>
-	
-	
 
+
+	<!-- for navigation -->
+	<script>
+		var value = 0;
+
+		function tabFunction(x) {
+
+			//desktop
+			if (x.matches) { 
+
+				value = 0;
+				
+				document.body.className = "";
+				document.getElementById("navbar").className = "ui inverted borderless stackable menu";
+				document.getElementById("menu_mobile").className = "";
+				document.getElementById("whole_page").className = "";
+
+				window.onscroll = function() {scrollFunction_desktop()};
+				function scrollFunction_desktop() {
+		  			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {    
+						document.getElementById("navbar").className = "ui inverted borderless menu scroll_navigation";
+						document.getElementById("title_page").className = "page_title top_space";
+					} 
+					else {
+						document.getElementById("navbar").className = "ui inverted borderless menu";
+						document.getElementById("title_page").className = "page_title";
+					}
+				}
+			}
+			//mobile
+			else {
+
+				value = 250;
+
+				document.getElementById("navbar").className = "ui inverted borderless stackable menu side_navigation";
+				document.getElementById("menu_mobile").className = "menu";
+				document.getElementById("whole_page").className = "whole_page_styles";
+
+				window.onscroll = function() {scrollFunction_mobile()};
+				function scrollFunction_mobile() {
+					if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {    
+						document.getElementById("navbar").className = "ui inverted borderless stackable menu side_navigation";
+					} 
+					else {
+						document.getElementById("navbar").className = "ui inverted borderless stackable menu side_navigation";
+					}
+				}
+			}
+		}
+
+		var x = window.matchMedia("(min-width: 768px)")
+		tabFunction(x) // Call listener function at run time
+		x.addListener(tabFunction) // Attach listener function on state changes
+	</script>
+	
+	<!-- open and close side menu -->
+	<script>
+		function openNav() {
+			document.body.className = "on_mobile";
+		}
+		function closeNav() {
+			document.body.className = "";
+		}
+	</script>
+
+	<!-- hover effect portfolio -->
 	<script>
 		$('.special.cards .image').dimmer({
 		  on: 'hover'
 		});
 	</script>
+
+	<!-- active nav effect -->
 	<script>
-		$('.fade-down').hover(function(){
-	        $(this).transition('slide up');
-	    }, function(){});
+		$('.item').click(function() {
+			$('.item').attr('class', 'item');
+			$(this).attr('class', 'item active');	
+		});
 	</script>
+
+	<!-- active link on scroll -->
+	<script>
+		$(window).scroll(function() {
+			var scrollDistance = $(window).scrollTop();
+
+			// console.log(value);
+			var homeHeight = ($("#home_page").height()/2) + $("#navbar").height() - value;
+			var aboutHeight = (homeHeight) + $("#about").height() - value;
+			var portHeight = (aboutHeight) + $("#portfolio").height() - value;
+			var expHeight = (portHeight) + $("#experience").height() - value;
+			var skillsHeight = (expHeight) + $("#skills").height() - value;
+			var contactHeight = (skillsHeight) + $("#contact").height() - value;
+
+			if (scrollDistance <= homeHeight) {
+				$(".item:nth-child(2)").addClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				$(".item:nth-child(6)").removeClass("active");
+				$(".item:nth-child(7)").removeClass("active");
+				// console.log("home");
+			}
+			else if ( (scrollDistance >= homeHeight) && (scrollDistance <= aboutHeight) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").addClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				$(".item:nth-child(6)").removeClass("active");
+				$(".item:nth-child(7)").removeClass("active");
+				// console.log("about");
+			}
+			else if ( (scrollDistance >= aboutHeight) && (scrollDistance <= portHeight) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").addClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				$(".item:nth-child(6)").removeClass("active");
+				$(".item:nth-child(7)").removeClass("active");
+				// console.log("portfolio");
+			}
+			else if ( (scrollDistance >= portHeight) && (scrollDistance <= expHeight) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").addClass("active");
+				$(".item:nth-child(6)").removeClass("active");
+				$(".item:nth-child(7)").removeClass("active");
+				// console.log("experience");
+			}
+			else if ( (scrollDistance >= expHeight) && (scrollDistance <= (skillsHeight+value*3)) ) {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				$(".item:nth-child(6)").addClass("active");
+				$(".item:nth-child(7)").removeClass("active");
+				// console.log("skills");
+			}
+			else {
+				$(".item:nth-child(2)").removeClass("active");
+				$(".item:nth-child(3)").removeClass("active");
+				$(".item:nth-child(4)").removeClass("active");
+				$(".item:nth-child(5)").removeClass("active");
+				$(".item:nth-child(6)").removeClass("active");
+				$(".item:nth-child(7)").addClass("active");
+				// console.log("contact");
+			}
+		}).scroll();
+	</script>
+
+	<!-- form -->
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+	<script src="js/form.js"></script>
+
+
 </body>
 </html>
+
+
+
+
+<!-- http://onepagelinks.divisoupdemos.com/ -->
+
+
+

@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+	background-color: #000;
+}
+.ui.inverted.menu {
+	background: transparent;
+}
+.title_cap {
+	padding-top: 142.344px;
+    height: 900px;
+}
+.right.menu {
+    margin-top: 5px !important;
+}
+.sections.bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sections.bg:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.2);
+}
+.about_image {
+	background-image: url(../assets/images/about_img.jpg); 
+	height: auto;
+	position: relative; 
+	z-index: 9; 
+}
+.portfolio_image {
+	background-image: url(../assets/images/port_img.jpg); 
+	height: auto;
+	position: relative; 
+	z-index: 8;
+}
+.experience_image {
+	background-image: url(../assets/images/exp_img.jpg); 
+	height: auto;
+	position: relative;
+	z-index: 7;
+}
+.skills_image {
+	background-image: url(../assets/images/skills_img.jpg); 
+	height: auto;
+	position: relative;
+	z-index: 6;
+}
+.contact_image {
+	background-image: url(../assets/images/exp_img5.jpg); 
+	height: auto;
+	position: relative;
+	z-index: 5;
+}
+.footer_image {
+	background-color: #fff; 
+	height: auto;
+	position: relative;
+	z-index: 4;
+}
+.section_container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+}
