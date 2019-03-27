@@ -47,14 +47,26 @@ body {
 	position: relative;
 	z-index: 7;
 }
+.ui.placeholder.segment {
+    background-color: transparent;
+    border: none;
+}
 .skills_image {
-	background-image: url(../assets/images/skills_img.jpg); 
+	background-image: url(../assets/images/contact_img11.jpg); 
 	height: auto;
 	position: relative;
 	z-index: 6;
 }
+.transparent_img {
+	background-color: #fff;
+	border-radius: 5px;
+}
+.skills_img img {
+    width: 150px;
+    margin: 20px;
+}
 .contact_image {
-	background-image: url(../assets/images/exp_img5.jpg); 
+	background-image: url(../assets/images/contact_img.jpg); 
 	height: auto;
 	position: relative;
 	z-index: 5;
