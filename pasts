@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</head>
+<body>
+    <!-- <aside></aside>
+    <header></header>
+    <section></section>
+    <section></section>
+    <section></section>
+    <main></main>
+    <footer></footer> -->
+
+    <div class="ui container">
+        <div class="ui raised very padded text container segment">
+            <h2 class="ui header">Dogs Roles with Humans</h2>
+            <div class="ui accordion">
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    What kinds of dogs are there?
+                </div>
+                <div class="content">
+                    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+                    <ul>
+                        <li>Dogs Roles with Humans</li>
+                        <li>Dogs Roles with Humans</li>
+                        <li>Dogs Roles with Humans</li>
+                    </ul>
+                </div>
+            </div>
+            <h2 class="ui header">Dogs Roles with Humans</h2>
+            <div class="ui accordion">
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    What kinds of dogs are there?
+                </div>
+                <div class="content">
+                    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+                    <ul>
+                        <li>Dogs Roles with Humans</li>
+                        <li>Dogs Roles with Humans</li>
+                        <li>Dogs Roles with Humans</li>
+                    </ul>
+                </div>
+            </div>
+            <h2 class="ui header">Dogs Roles with Humans</h2>
+            <div class="ui accordion">
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    What kinds of dogs are there?
+                </div>
+                <div class="content">
+                    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+      <script>
+          $('.ui.accordion')
+            .accordion()
+            ;
+      </script>
+</body>
+</html>
